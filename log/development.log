@@ -1716,3 +1716,69 @@ DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please ch
   Rendering /Users/cookiemccormick/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
   Rendered /Users/cookiemccormick/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/cookiemccormick/.rvm/gems/ruby-2.6.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.5ms)
+Started GET "/" for ::1 at 2019-05-19 22:01:03 -0400
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/cookiemccormick/.rvm/gems/ruby-2.6.1/gems/activerecord-5.0.7.2/lib/active_record/railtie.rb:113)
+Processing by SearchesController#search as HTML
+Redirected to https://foursquare.com/oauth2/authenticate?client_id=MHPPNJWX21J5I0ZFECJCZPTNE12GWR5KZQJQ0F3YUDJC1F15&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fauth
+Filter chain halted as :authenticate_user rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/auth?code=05KBINM0NWJ0GGIWYHKSOUW3PIA2SDZXPWCJY2QOW3WHG3Y2" for ::1 at 2019-05-19 22:01:09 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"05KBINM0NWJ0GGIWYHKSOUW3PIA2SDZXPWCJY2QOW3WHG3Y2"}
+Redirected to http://localhost:3000/
+Completed 302 Found in 325ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-05-19 22:01:10 -0400
+Processing by SearchesController#search as HTML
+  Rendering searches/search.html.erb within layouts/application
+  Rendered searches/search.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 319ms (Views: 316.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for ::1 at 2019-05-19 22:01:14 -0400
+Processing by SearchesController#foursquare as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VEQHXLMPRb/Ynq+xtX1BhYrdSM7/gBCyUrFCgaprq/cVo63Xkw9p0rM5kzwCCFbmwopH2FZHaetNrXxkEOdLNA==", "zipcode"=>"33714", "commit"=>"Search!"}
+  Rendering searches/search.html.erb within layouts/application
+  Rendered searches/search.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 421ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/tips" for ::1 at 2019-05-19 22:03:10 -0400
+Processing by TipsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q1bCvLHzR1OZwADeN7C7SVoLgqL24AtnNa9Df7fb9z7qsWg3kfNrPvJnPFOAxawqElyNtF8ncj4qs32aDVcX/Q==", "venue_id"=>"4b156dc5f964a520beac23e3", "tip"=>"Good coffee.", "commit"=>"Add Tip"}
+Redirected to http://localhost:3000/tips
+Completed 302 Found in 509ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tips" for ::1 at 2019-05-19 22:03:10 -0400
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  Rendered tips/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 305ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tips" for ::1 at 2019-05-19 22:03:50 -0400
+Processing by TipsController#index as HTML
+  Rendering tips/index.html.erb within layouts/application
+  Rendered tips/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 379ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search" for ::1 at 2019-05-19 22:04:12 -0400
+Processing by SearchesController#search as HTML
+  Rendering searches/search.html.erb within layouts/application
+  Rendered searches/search.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/search" for ::1 at 2019-05-19 22:04:14 -0400
+Processing by SearchesController#foursquare as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tw1cwkChGOtlRSfKLV0GxqSmH0UXDdQUZzlgEHbXfp0O6vZJYKE0hg7iG0eaKBGl7PEQU77KrU14JV71zFueXg==", "zipcode"=>"33714", "commit"=>"Search!"}
+  Rendering searches/search.html.erb within layouts/application
+  Rendered searches/search.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 325ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
